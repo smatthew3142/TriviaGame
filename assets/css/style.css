@@ -7,7 +7,7 @@ html, body {
 
 body {
 
-  font-family: 'Raleway', 'Arial', Helvetica, sans-serif;
+  font-family: 'Vollkorn SC', Times, Times New Roman, serif;
   color: #777777;
 }
 
@@ -20,17 +20,35 @@ h1, h2, h3 {
 	font-family: 'Vollkorn SC', Times, Times New Roman, serif;
 }
 
-.btn-primary,.reset{
+.question{
+  font-family: 'Vollkorn SC', Times, Times New Roman, serif;
+  color: #777777;
+}
+
+#newQuestion,.possibleAnswer{
+  font-family: 'Vollkorn SC', Times, Times New Roman, serif;
+  color: #777777;
+  font-size: 24px;
+}
+
+#timeLeft{
+  font-family: 'Vollkorn SC', Times, Times New Roman, serif;
+  color: #777777;
+  font-size: 36px;
+
+}
+
+.btn-primary{
   background-color: #313477;
   color: white;
   font-family: 'Vollkorn SC', Times, Times New Roman, serif;
-}
-  font-size: 30px;
-  padding: 20px;
+  font-size: 36px !Important;
+  padding: 12px !Important;
   margin-top: 100px;
 }
-.btn-primary:hover, .reset:hover{
-  background-color: #202364;
+
+.btn-primary:hover{
+  background-color: #252525 !Important;
 }
 
 .container{
@@ -41,13 +59,14 @@ h1, h2, h3 {
 }
 
 h2, #message, #finalScore{
-  font-family: 'Raleway', 'Arial', Helvetica, sans-serif;
+  font-family: 'Vollkorn SC', Times, Times New Roman, serif;
 }
 
-.userChoice:hover{
-  background-color: #202364;
-  color: white;
-  padding: 10px;
+.selectThis:hover{
+  color: #252525;
+  font-size: 28px;
+  font-weight: 700;
+
 }
 
 #gif{
