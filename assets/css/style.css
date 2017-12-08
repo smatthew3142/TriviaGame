@@ -50,7 +50,7 @@ h2, #message, #finalScore{
   padding: 10px;
 }
 
-.gifImg{
+#gif{
   margin: 30px;
   max-width: 400px;
   align: center;

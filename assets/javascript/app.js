@@ -26,7 +26,7 @@ $(document).ready(function(){
 		question: "Who was Arya Stark's 'dance instructor'?",
 		possibleAnswer:["Syrio Forel","Jaqen H'ghar","Illyrio Mopatis","Ilyn Payne"],
 		answer: 0
-	}.{
+	},{
 
 		question: "What is the name of Eddard (Ned) Stark's Valyrian Steel Sword?",
 		possibleAnswer:["Widow's Wail","Longclaw","Oathkeeper","Ice"],
@@ -69,7 +69,7 @@ $(document).ready(function(){
 	},{
 
 		question: "Jon Snow's biological parents are...",
-		possibleAnswer:["Targaryen & Stark","Targaryen & Martell","Stark & Baratheon","Martell & Stark"],
+		possibleAnswer:["a Targaryen & a Stark","a Targaryen & a Martell","a Stark & a Baratheon","a Martell & a Stark"],
 		answer: 0
 	},{
 
@@ -78,6 +78,87 @@ $(document).ready(function(){
 		answer: 2
 
 	}];
+
+	var gifs = ['gif1','gif2','gif3','gif4','gif5','gif6','gif7','gif8','gif9','gif10','gif11','gif12'];
+	var newQuestion;
+	var userAnswer;
+	var correctAnswer;
+	var wrongAnswer;
+	var noAnswer;
+	var questionAnswered;
+	var time;
+	var timeLeft;
+
+	var message = {
+
+		correct: "Correct!",
+		wrong: "You know nothin' Jon Snow.",
+		timeOut: "Time's up!",
+		gameEnd:"Here are your results!"
+	}
+
+
+//start a new game by pressing the 'start' button or the 'try again' button
+
+$('#start').on('click', function(){
+	$(this).hide();
+	newGame();
+});
+
+$('#tryAgain').on('click', function(){
+	$(this).hide();
+	newGame();
+});
+
+//reset game
+function newGame(){
+
+	$('#finalScore').empty();
+	$('#correctAnswer').empty();
+	$('#wrongAnswer').empty();
+	$('#noAnswer').empty();
+	newQuestion = 0;
+	correctAnswer = 0;
+	wrongAnswer = 0;
+	noAnswer = 0;
+	question();
+}
+
+//new question
+function question(){
+
+	$('#message').empty();
+	$('#correctAnswer').empty();
+	$('#image').empty();
+	questionAnswered = true;
+
+	//get new question and answers
+	$('#newQuestion').html('Question #' + newQuestion);
+
+	$('.question').html(triviaQuestion[newQuestion].question);
+
+	for(var i = 0; i < 4; i++){
+		var answerChoice = $('<div>');
+		answerChoice.text(triviaQuestion[newQuestion].possibleAnswer[i]);
+		answerChoice.attr({'data-index': i });
+		answerChoice.addClass('selectThis');
+		$('.possibleAnswer').append(answerChoice);
+	}
+
+
+}
+
+//press answer
+
+//result landing page; time for 7 sec
+
+	//if correct, show gif and message, add to final score
+
+	//if wrong, show gif and message
+
+//if no answer is submitted, say time's up
+
+//final score, show how many answers are correct, how many are wrong, how many missed
 
 
 
