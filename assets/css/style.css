@@ -6,9 +6,11 @@ html, body {
 }
 
 body {
-
+  background-image: url("../images/design/map_copy.jpg");
+  background-position: 10%; 
+  background-size: 1920px;
   font-family: 'Vollkorn SC', Times, Times New Roman, serif;
-  color: #777777;
+  color: white;
 }
 
 h1, h2, h3 {
@@ -16,31 +18,36 @@ h1, h2, h3 {
 }
 
 .jumbotron{
+  background-color: #dbd1c7 !Important;
 	margin: 25px;
 	font-family: 'Vollkorn SC', Times, Times New Roman, serif;
+  color: #81533a !Important;
+  
 }
 
-.question{
+
+.question {
   font-family: 'Vollkorn SC', Times, Times New Roman, serif;
-  color: #777777;
+  color: white;
 }
 
-#newQuestion,.possibleAnswer{
+#newQuestion,.possibleAnswer, #theCorrectAnswer {
   font-family: 'Vollkorn SC', Times, Times New Roman, serif;
-  color: #777777;
+  color: white;
   font-size: 24px;
 }
 
-#timeLeft{
+#timeLeft, #message, #finalScore, #correctAnswer,#wrongAnswer,#noAnswer{
   font-family: 'Vollkorn SC', Times, Times New Roman, serif;
-  color: #777777;
+  color: white;
   font-size: 36px;
 
 }
 
 .btn-primary{
-  background-color: #313477;
-  color: white;
+  background-color: #81533a !Important;
+  color:#dbd1c7 !Important;
+  border-style: none !Important;
   font-family: 'Vollkorn SC', Times, Times New Roman, serif;
   font-size: 36px !Important;
   padding: 12px !Important;
@@ -48,7 +55,7 @@ h1, h2, h3 {
 }
 
 .btn-primary:hover{
-  background-color: #252525 !Important;
+  background-color: #4f260f !Important;
 }
 
 .container{
@@ -58,12 +65,9 @@ h1, h2, h3 {
   width: 700px;
 }
 
-h2, #message, #finalScore{
-  font-family: 'Vollkorn SC', Times, Times New Roman, serif;
-}
 
 .selectThis:hover{
-  color: #252525;
+  color: #e8c4b0;
   font-size: 28px;
   font-weight: 700;
 
@@ -76,6 +80,7 @@ h2, #message, #finalScore{
 }
 
 @media screen and (max-width:640px){
+
   .container{
     width: 500px;
     margin-top: 200px;

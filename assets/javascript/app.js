@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 	}];
 
-	var gifs = ['gif1','gif2','gif3','gif4','gif5','gif6','gif7','gif8','gif9','gif10','gif11','gif12'];
+	var gifs = ['lysa','direwolf','jaime','lionking','syrio','ice','viserion','light','fart','tree','dany','tyrion','cersei','jon','olenna'];
 	var newQuestion;
 	var playerAnswer;
 	var correctAnswer;
@@ -99,7 +99,7 @@ $(document).ready(function(){
 
 
 //start a new game by pressing the 'start' button or the 'try again' button
-
+$('#tryAgain').hide();
 $('#start').on('click', function(){
 	$(this).hide();
 	newGame();
@@ -117,6 +117,8 @@ function newGame(){
 	$('#correctAnswer').empty();
 	$('#wrongAnswer').empty();
 	$('#noAnswer').empty();
+	$('#theCorrectAnswer').empty();
+	$('#tryAgain').hide();
 	newQuestion = 0;
 	correctAnswer = 0;
 	wrongAnswer = 0;
@@ -129,6 +131,7 @@ function question(){
 
 	$('#message').empty();
 	$('#correctAnswer').empty();
+	$('#theCorrectAnswer').empty();
 	$('#image').empty();
 	questionAnswered = true;
 
@@ -192,7 +195,7 @@ function question(){
 	var answerIndex = triviaQuestion[newQuestion].answer;
 	console.log(answerIndex);
 	//on result page, always show gif
-	// $('#image').html('<img src = "assets/images/'+ gif[newQuestion] +'.gif" width = "650px">');
+	$('#image').html('<img src = "assets/images/'+ gifs[newQuestion] +'.gif" width = "550px">');
 	
 	//if correct, show gif and message, add to final score
 
@@ -255,28 +258,15 @@ function finalScore(){
 
 	$('#correctAnswer').html("Correct Answers: " + correctAnswer);
 
-	$('#wrongAnswers').html("Incorrect Answers: " + wrongAnswer);
+	$('#wrongAnswer').html("Incorrect Answers: " + wrongAnswer);
 
 	$('#noAnswer').html("Missed: " + noAnswer);
 
-	$('#startOverBtn').addClass('reset');
-	$('#startOverBtn').show();
-	$('#startOverBtn').html('Start Over?');
+	$('#tryAgain').addClass('reset');
+	$('#tryAgain').show();
+	$('#tryAgain').html('Start Over?');
 
 }
-
-
-
-
-	
-	
-
-
-
-
-
-
-
 
 
 
